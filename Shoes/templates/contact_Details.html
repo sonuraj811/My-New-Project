@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="card-body">
+        <h4 class="card-title"><center>Contact Details</center></h4>
+      <p class="card-description">
+        Contact Data
+      </p>
+        <div class="table-responsive pt-3">
+            <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>SUBJECT</th>
+            <th>MESSAGE</th>
+        </tr>
+    </thead>
+    {% for i in details %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.subject }}</td>
+            <td>{{ i.message }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
+{% endblock %}
