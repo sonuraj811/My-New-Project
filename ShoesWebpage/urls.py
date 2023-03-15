@@ -10,7 +10,11 @@ urlpatterns=[
     path('prodetails/<int:dataid>', views.prodetails, name="prodetails"),
     path('login/', views.login, name='login'),
     path('loginsave/', views.loginsave, name='loginsave'),
+    path('logoutfn/', views.logoutfn, name='logoutfn'),
     path('customerlogin/', views.customerlogin, name='customerlogin'),
     path('contact_save/', views.contact_save, name="contact_save"),
+    path('cart/', views.cart, name="cart"),
+    path('cartview/',views.cartview,name='cartview'),
+    path('deleteitem/<int:dataid>', views.deleteitem, name='deleteitem')
 
 ]
